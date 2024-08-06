@@ -1,0 +1,53 @@
+Name: Rishi Rana
+net ID: rr4211
+NYU ID(N#): N16441446
+
+Collaborators (who you talked to about the lab, what you talked about):
+Eiko Reis, we only talked about some theory regarding how locks, threads, and etc. work.
+
+
+Source material that you consulted:
+Online resources about how the queue and vector standard library work (methods, etc.)
+the provided sheet about learning C++
+
+Other acknowledgments:
+Im using 1 slack day for this
+
+-------------------------------------------------------------------------------
+
+Answers to exercises G1--G3:
+
+G1.1. 
+The command recursively checks every directory in the root directory and outputs any line found in any file with "smutex" mentioned it.
+
+G1.2.
+sthread.cpp:void smutex_init(smutex_t *mutex)
+sthread.cpp:void smutex_destroy(smutex_t *mutex)
+sthread.cpp:void smutex_lock(smutex_t *mutex)
+sthread.cpp:void smutex_unlock(smutex_t *mutex)
+sthread.cpp:void scond_signal(scond_t *cond, smutex_t *mutex __attribute__((unused)))
+
+G2.1
+
+grep "Task" RequestGenerator.cpp
+
+G2.2
+
+grep "return" *.h
+
+G3
+
+It returns all lines that are function declorations with "smutex" in the name.
+sthread.h:void smutex_init(smutex_t *mutex);
+sthread.h:void smutex_destroy(smutex_t *mutex);
+sthread.h:void smutex_lock(smutex_t *mutex);
+sthread.h:void smutex_unlock(smutex_t *mutex);
+-------------------------------------------------------------------------------
+
+Anything else you'd like us to know:
+N/A
+
+
+Extra credit exercise(s) (describe what you coded):
+    for exercise 8 I wrote a bit of extra code in buyAllItems that will cause threads to wait in case there a change in item discount or price so that the whole order could be bought.
+    didnt do exercise 9 because I cant figure out how to lock all store discount and shipping requets while an order is processing.
